@@ -1,0 +1,62 @@
+<form
+  method="POST"
+  action="{{ url_for('categoria_bp.update') }}"
+  enctype="multipart/form-data"
+>
+  <input type="hidden" name="txtId" id="txtId" value="{{clasificacion[0]}}" />
+
+  <div
+    class="modal fade"
+    id="modaledit{{clasificacion[0]}}"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modaledit{{clasificacion[0]}}"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-tittle">Editar Clasificacion</h4>
+          <br />
+
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Cerrar"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body p-2">
+          <div class="row justify-content-md-center">
+            <h5 class="text-center">{{clasificacion[1]}}</h5>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col-md">
+              <label for="txtNombre">Nombre</label>
+            </div>
+            <div class="col-md d-inline">
+              <input
+                class="form-control d-inline"
+                type="text"
+                name="txtNombre"
+                id="txtNombre"
+                value="{{clasificacion[1]}}"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="row p-2">
+            <input class="btn btn-success" type="submit" value="Agregar" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

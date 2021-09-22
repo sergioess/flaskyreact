@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.0/css/dataTables.bootstrap4.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.bootstrap4.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.css"
+    />
+
+    <!-- Google Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top"
+    >
+      <a class="navbar-brand">Mi tienda</a>
+      <button
+        class="navbar-toggler mb-md-1"
+        data-target="#my-nav"
+        data-toggle="collapse"
+        aria-controls="my-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <div class="row rounded bg-dark ml-3 d-flex mb-md-1"></div>
+          <div class="row rounded bg-primary ml-3 d-flex mb-md-1">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                href="{{ url_for('categoria_bp.index') }}"
+                tabindex="-1"
+                aria-disabled="true"
+                >Egresos</a
+              >
+            </li>
+          </div>
+          <div class="row rounded bg-secondary ml-3 d-flex mb-md-1">
+            <li class="nav-item">
+              <a
+                class="nav-link text-white pr-1"
+                href="{{ url_for('categoria_bp.index') }}"
+                tabindex="-1"
+                aria-disabled="true"
+                >Clasificacion</a
+              >
+            </li>
+          </div>
+          <div class="row rounded bg-info ml-3 d-flex mb-md-1"></div>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

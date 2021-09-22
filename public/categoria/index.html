@@ -1,0 +1,62 @@
+{% include '/header.html' %}
+<div class="container">
+  <br />
+  <div class="row justify-content-center">
+    <h2>Clasificaciones</h2>
+  </div>
+  <div class="card-header">
+    <a
+      class="btn btn-primary btn-sm"
+      href="#"
+      data-toggle="modal"
+      data-target="#modalcreate"
+    >
+      Nueva Clasificación</a
+    >
+    {% include '/categoria/modal/create.html' %}
+  </div>
+  <br />
+  <br />
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Nombre</td>
+        <td>Acciones</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for clasificacion in clasificaciones %}
+      <tr>
+        <td>{{loop.index0 + 1}}</td>
+        <!-- <td>{{clasificacion['id']}}</td> -->
+        <td>{{clasificacion[1]}}</td>
+        <td>
+          <a
+            class="btn btn-warning btn-sm py-0"
+            href="#"
+            data-toggle="modal"
+            data-target="#modaledit{{clasificacion[0]}}"
+          >
+            <i class="far fa-edit"></i
+          ></a>
+
+          |
+
+          <a
+            onclick="return confirm('Desea borrar la Categoria?')"
+            class="btn btn-danger btn-sm py-0"
+            href="/categoria/destroy/{{clasificacion[0]}}"
+          >
+            <i class="far fa-trash-alt"></i
+          ></a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% for clasificacion in clasificaciones %} {% include
+'/categoria/modal/edit.html' %} {% endfor %} {% include '/footer.html' %}

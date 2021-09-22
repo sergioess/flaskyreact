@@ -1,0 +1,52 @@
+<form
+  method="POST"
+  action="{{ url_for('categoria_bp.store') }}"
+  enctype="multipart/form-data"
+>
+  <div
+    class="modal fade text-left p-5"
+    id="modalcreate"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-tittle">Nueva Categoria</h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Cerrar"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body p-2">
+          <div class="row">
+            <div class="col-md">
+              <label for="txtNombre">Nombre</label>
+            </div>
+            <div class="col-md d-inline">
+              <input
+                class="form-control d-inline"
+                type="text"
+                name="txtNombre"
+                id="txtNombre"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="row p-2">
+            <input class="btn btn-success" type="submit" value="Agregar" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
